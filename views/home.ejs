@@ -1,0 +1,40 @@
+<%-include('./partials/header')%>
+<%-include('./partials/navbar')%>   
+<div class="container d-flex flex-column justify-content-center align-items-center" style="font-family:'Rampart One', cursive; ">
+    
+   
+     
+    <div class="d-flex flex-column justify-content-center align-items-center text-white"
+        style="background: url('https://d-tm.ppstatic.pl/kadry/b3/e7/90af6417214e84807f9123fc3473.1000.jpg');background-size: cover;min-width: 100vw; min-height: 100vh;">
+        
+        <div class=" d-flex align-items-center justify-content-between " ><h1>YOUR SECRET PAGE</h1> </div>
+        <h2 id="h2">Witaj: <%=data%>!!!</h2>
+        <div><h3 class="h3 px-2" style="background:red;text-align: center"></h3></div>
+        <h1 class="fs-1">FINANCIAL PLANNERS</h1>
+        
+        <p class="fs-3" style="text-align: center;">You deserve great financial advice and planning services.</p>
+        <p>Donate your money to us and you'll make a fortune</p>
+        <div class="input-group mb-3 w-75">
+            
+            <input id="mony" type="number" class="form-control px-4"  aria-describedby="inputGroup-sizing-default" value="1000000"    placeholder="1.000.000$" min="0" step="1000000" style="text-align: center;">
+            <button class="btn btn-success" type="button" id="button-addon2">Pay</button>
+          </div>
+          
+    </div>
+    
+</div>
+<script>
+    const mony= document.querySelector('#mony')
+    const btn= document.querySelector('#button-addon2')
+    const h3= document.querySelector('.h3')
+    const h2= document.querySelector('#h2')
+    let str=' Do not call ! We will call you back!'
+    function hiding(){
+        mony.value=0
+        h3.innerHTML=`Thank you! <%=data.toUpperCase()%> \n ${str}`
+        h2.innerHTML=''
+    }
+    btn.addEventListener('click',hiding)
+
+</script>
+<%-include('./partials/footer')%>

@@ -1,0 +1,52 @@
+<%-include('./partials/header')%>
+   
+    <div class="container mt-5 d-flex flex-column justify-content-center align-items-center  " style="background: radial-gradient(lightblue,hsl(198, 78%, 64%));">
+        <h1 class="mb-4 text-dark " style="font-family:'Rampart One', cursive; ">Website for VIPs <span class="fs-1">💰</span> </h1>
+        <div class="row ">
+            <div class="col-md-6 shadow p-4" style="font-family:'Rampart One', cursive; ">
+                
+                <h3>Register 🖍️:</h3>  
+                <form class="row g-3" action="/register/" method="POST" >
+                    <div class="col-md-12">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control"  name="name" required>
+                      </div>
+                    
+                    <div class="col-md-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control"  name="email" required>
+                      </div>
+                      <div class="col-md-12">
+                        <label for="password" class="form-label">password</label>
+                        <input type="password" class="form-control" name="password" required>
+                      </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                  </form>                
+            </div>
+            <div class="col-md-6 shadow p-4" style="font-family:'Rampart One', cursive; ">
+                <h3>Sign In 🚀:</h3>
+                <form class="row g-3" action="/login" method="POST">
+                    
+                    <div class="col-md-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="password" class="form-label">password</label>
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+    
+                    <div class="col-12 d-flex justify-content-between align-items-center">
+                        <button type="submit" class="btn btn-success px-5">Sign in</button>
+                        <a class="btn btn-secondary my-4" href="/forgot-password">reset password</a>
+                        
+                      </div>
+    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <%-include('./partials/footer')%> 

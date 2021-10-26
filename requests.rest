@@ -1,0 +1,24 @@
+
+
+GET http://localhost:3000 
+
+###
+
+
+GET http://localhost:3000/api/users 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM1MDIxMTAzLCJleHAiOjE2MzUwODUxMDN9.LTt0oKNU2C8DLUv8LulxT7UcKw-x6wzqncDqWVnAZAo
+
+###
+POST http://localhost:3000/api/auth/login 
+
+{
+    "email":"ajarek@poczta.onet.pl",
+    "password":"2101"
+}
+###
+POST http://localhost:3000/api/auth/refresh 
+content-type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM1MDE5MDU5LCJleHAiOjE2MzU1NDQ2NTl9.oBqqu1aDVD6cq8jWb4by2-oBPLs-BIVxlY3ieO0eHnU"
+}
